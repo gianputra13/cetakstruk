@@ -319,7 +319,7 @@ function getCetak(kode, potrait, admin1) {
                         "&tujuan=" +
                         tujuan;
                 } else {
-                    alert(judul);
+                    // alert(judul);
                     window.location =
                         "/tagihan?nama=" +
                         nama +
