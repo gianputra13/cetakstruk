@@ -19,6 +19,8 @@
         $harga = $_GET['harga'];
         $tgl_entri = $_GET['tgl_entri'];
         $tujuan = $_GET['tujuan'];
+        $adminCustom = $_GET['adminCustom'];
+        $total = $harga + $adminCustom;
     ?>
     <table class="page-break" style="font-family: Arial; font-size:11px; padding: 0 0 0 0;">
         <tr>
@@ -65,7 +67,7 @@
                         <td>ADMIN</td>
                         <td>:</td>
                         <td>&nbsp;&nbsp;Rp.
-                            <?php echo $admin ?>
+                            <?php echo $adminCustom ?>
                         </td>
                     </tr>
                     {{-- <tr v-if="stateDenda">
@@ -85,7 +87,7 @@
                         <td>TOTAL</td>
                         <td>:</td>
                         <td>&nbsp;&nbsp;Rp.
-                            <?php echo $total_tagihan ?>
+                            <?php echo $total ?>
                         </td>
                     </tr>
                 </table>
@@ -117,7 +119,7 @@
                         <td>ADMIN </td>
                         <td>:&nbsp;&nbsp;Rp.</td>
                         <td align="right">
-                            <?php echo $admin ?>
+                            <?php echo $adminCustom ?>
                         </td>
                     </tr>
                     <tr>
@@ -150,7 +152,7 @@
                         <td>TOTAL </td>
                         <td>:&nbsp;&nbsp;Rp.</td>
                         <td align="right">
-                            <?php echo $total_tagihan ?>
+                            <?php echo $total ?>
                         </td>
                     </tr>
                     {{-- <tr>

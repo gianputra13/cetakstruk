@@ -47,10 +47,10 @@
                   </div>
                   <div class="row justify-content-end">
                     <div class="col-sm-6 mt-2">
-                      <input type="text" placeholder="Tanggal Awal" id="start_date" class="form-control datepicker">
+                      <input type="text" placeholder="Tanggal Awal" id="start_date" class="form-control datepicker" value="<?php echo date('Y-m-d',strtotime("-30 days")); ?>">
                     </div>
                     <div class="col-sm-6 mt-2">
-                      <input type="text" placeholder="Tanggal Ahkir" id="end_date" class="form-control datepicker">
+                      <input type="text" placeholder="Tanggal Ahkir" id="end_date" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
                     </div>
                   </div>
                 </div>
@@ -84,6 +84,11 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <span>Search tujuan bisa lebih dari satu</span>
       </div>
     </div>
 

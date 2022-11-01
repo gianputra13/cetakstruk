@@ -19,7 +19,9 @@
         $tgl_entri = $_GET['tgl_entri'];
         $tujuan = $_GET['tujuan'];
         $judul = $_GET['judul'];
-        $tgl_sekarang = date("Y/m/d")
+        $tgl_sekarang = date("Y/m/d");
+        $adminCustom = $_GET['adminCustom'];
+        $total = $harga + $adminCustom;
     ?>
     <div style="font-family: Arial; font-size:11px; padding:2mm;width:80mm;">
         ------------------------------------------------------------------------------
@@ -53,7 +55,7 @@
             </tr>
             <tr>
                 <td>Adm Bank</td>
-                <td>: <?php echo $admin ?></td>
+                <td>: <?php echo $adminCustom ?></td>
             </tr>
             <tr>
                 <td>Periode</td>
@@ -64,7 +66,7 @@
             </tr>
             <tr>
                 <td>Total</td>
-                <td>: <?php echo $total_tagihan ?></td>
+                <td>: <?php echo $total ?></td>
             </tr>
         </table>
         <br>------------------------------------------------------------------------------

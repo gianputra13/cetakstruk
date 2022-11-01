@@ -22,6 +22,8 @@
         $admin = $_GET['admin'];
         $harga = $_GET['harga'];
         $tgl_entri = $_GET['tgl_entri'];
+        $adminCustom = $_GET['adminCustom'];
+        $total = $harga + $adminCustom
     ?>
     <div style="font-family: Arial; font-size:11px; padding:2mm;width:80mm;">
         <center>STRUK PEMBELIAN LISTRIK PRABAYAR</center><br>
@@ -81,7 +83,11 @@
             </tr> --}}
             <tr>
                 <td>ADMIN BANK</td>
-                <td>: <?php echo $admin ?></td>
+                <td>: <?php echo $adminCustom ?></td>
+            </tr>
+            <tr>
+                <td>Total Harga</td>
+                <td>: <?php echo $total ?></td>
             </tr>
         </table>
         <br>

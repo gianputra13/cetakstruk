@@ -19,7 +19,8 @@
         $harga = $_GET['harga'];
         $tgl_entri = $_GET['tgl_entri'];
         $tujuan = $_GET['tujuan'];
-        $total = $harga + $admin
+        $adminCustom = $_GET['adminCustom'];
+        $total = $harga + $adminCustom
     ?>
     <div style="font-family: Arial; font-size:11px; padding:2mm;width:80mm;">
         ------------------------------------------------------------------------------
@@ -59,7 +60,7 @@
             </tr>
             <tr>
                 <td>Adm Bank</td>
-                <td>: <?php echo $admin ?></td>
+                <td>: <?php echo $adminCustom ?></td>
             </tr>
             <tr>
                 <td>Total</td>

@@ -22,7 +22,8 @@
         $admin = $_GET['admin'];
         $harga = $_GET['harga'];
         $tgl_entri = $_GET['tgl_entri'];
-        $total = $harga + $admin
+        $adminCustom = $_GET['adminCustom'];
+        $total = $harga + $adminCustom
     ?>
 <table class="page-break" style="font-family: Arial; font-size:11px; padding: 0 0 0 0;">
     <tr>
@@ -89,7 +90,7 @@
                     <td>ADMIN</td>
                     <td>:</td>
                     <td>&nbsp;Rp
-                        <?php echo $admin ?>
+                        <?php echo $adminCustom ?>
                     </td>
                 </tr>
                 {{-- <tr>
@@ -130,7 +131,7 @@
                     <td width="15%">ADMIN</td>
                     <td width="2%">:&nbsp;&nbsp;Rp</td>
                     <td width="15%" align="right">
-                        <?php echo $admin ?>
+                        <?php echo $adminCustom ?>
                     </td>
                 </tr>
                 <tr>

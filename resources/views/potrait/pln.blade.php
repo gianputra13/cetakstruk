@@ -20,6 +20,7 @@
         $tgl_entri = $_GET['tgl_entri'];
         $tujuan = $_GET['tujuan'];
         $adminCustom = $_GET['adminCustom'];
+        $total = $harga + $adminCustom;
     ?>
     <div style="font-family: Arial; font-size:11px; padding:2mm;width:80mm;">
         ------------------------------------------------------------------------------
@@ -68,11 +69,11 @@
             </tr>
             <tr>
                 <td>ADMIN CA*)</td>
-                <td>: <?php echo $admin ?></td>
+                <td>: <?php echo $adminCustom ?></td>
             </tr>
             <tr>
                 <td>TOTAL BAYAR</td>
-                <td>: <?php echo $total_tagihan ?></td>
+                <td>: <?php echo $total ?></td>
             </tr>
             {{-- <tr>
                 <td colspan='2'><b>Anda memiliki tunggakan *angsuran* bulan</b></td>
