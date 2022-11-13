@@ -69,6 +69,7 @@
                     <th scope="col">Admin</th>
                     <th scope="col">Harga</th>
                     <th scope="col">SN</th>
+                    {{-- <th scope="col">Custom Header</th> --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -85,12 +86,14 @@
           </div>
         </div>
       </div>
+       {{-- <div class="row">
+        <div class="col-sm-12">
+          <h6 class="text-danger "><small>*Search tujuan bisa lebih dari satu dengan pemisah koma</small></h6>
+          <h6 class="text-danger "><small>*Harga admin bisa dicustom</small></h6>
+        </div>
+      </div> --}}
     </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <span>Search tujuan bisa lebih dari satu</span>
-      </div>
-    </div>
+
 
     <div class="py-3 mt-5 bg-header footer">
       <div class="row text-center"><span>© Copyright MuraPay. All Rights Reserved</span></div>

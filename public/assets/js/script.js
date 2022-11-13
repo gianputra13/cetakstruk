@@ -107,7 +107,7 @@ function getData(send, spinner) {
             // alert(request.responseText);
             $(".spinner").html(spinner);
             $("#myTable").append(
-                '<tr class="tablerow"><td colspan="8" class="text-center">Error Api Server</td></tr>'
+                '<tr class="tablerow"><td colspan="8" class="text-center">Terjadi kegagalan pada server, Hubungi CS ,Murapay</td></tr>'
             );
         },
     });
@@ -169,6 +169,8 @@ function createpagination(pagenum, total_pages, send) {
 
 function cetak(kode, potrait) {
     var myVar = $("#" + kode).val();
+    // var myVar1 = $("#namaToko" + kode).val();
+    alert(myVar1);
     var admin1 = myVar;
     var kode = {
         kodetrx: kode,
