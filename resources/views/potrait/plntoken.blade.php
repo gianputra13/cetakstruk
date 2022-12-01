@@ -23,9 +23,11 @@
         $harga = $_GET['harga'];
         $tgl_entri = $_GET['tgl_entri'];
         $adminCustom = $_GET['adminCustom'];
+        $customToko = $_GET['customToko'];
         $total = $harga + $adminCustom
     ?>
     <div style="font-family: Arial; font-size:11px; padding:2mm;width:80mm;">
+        <center><h2><?php echo $customToko ?></h2></center>
         <center>STRUK PEMBELIAN LISTRIK PRABAYAR</center><br>
         -----------------------------------------------------------------------------<br><br>
         <table style="font-family: Arial; font-size:11px; padding:2mm;width:80mm;">

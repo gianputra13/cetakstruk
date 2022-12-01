@@ -14,7 +14,8 @@
         $periode = $_GET['periode'];
         $jml_bulan = $_GET['jml_bulan'];
         $tagihan = $_GET['tagihan'];
-        $admin = $_GET['admin'];
+        $tgl_sekarang = date("Y/m/d")
+        // $admin = $_GET['admin'];
         $total_tagihan = $_GET['total_tagihan'];
         $harga = $_GET['harga'];
         $tgl_entri = $_GET['tgl_entri'];
@@ -63,9 +64,8 @@
             <td></td>
             <td width="200">Tagihan</td>
             <td>:</td>
-            <td width="200">Rp. <span style="float:right;">
-                <?php echo $tagihan ?>
-            </span></td>
+            <td width="200">Rp.
+                <?php echo $tagihan ?></td>
         </tr>
         <tr>
             <td width="200">Nama</td>
@@ -76,22 +76,14 @@
             <td></td>
             <td width="200">Admin Bank</td>
             <td>:</td>
-            <td width="200">Rp. <span style="float:right;">
-                <?php echo $adminCustom ?>
-            </span></td>
+            <td width="200">Rp.
+                <?php echo $adminCustom ?></td>
         </tr>
         <tr>
-            {{-- <td width="200">SW Reff</td>
-            <td>:</td>
-            <td width="200">
-                <?php echo $tgl_entri ?>
-            </td> --}}
-            <td></td>
             <td width="200">Total Bayar</td>
             <td>:</td>
-            <td width="200">Rp. <span style="float:right;">
-                <?php echo $total ?>
-            </span></td>
+            <td width="200">Rp.
+                <?php echo $total ?></td>
         </tr>
         <tr>
             <td colspan="7" align="center"><br>Simpanlah Struk ini sebagai bukti pembayaran anda.<br>Struk ini

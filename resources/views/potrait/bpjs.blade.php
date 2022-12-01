@@ -14,7 +14,8 @@
         $periode = $_GET['periode'];
         $jml_bulan = $_GET['jml_bulan'];
         $tagihan = $_GET['tagihan'];
-        $admin = $_GET['admin'];
+        $tgl_sekarang = date("Y/m/d");
+        // $admin = $_GET['admin'];
         $total_tagihan = $_GET['total_tagihan'];
         $harga = $_GET['harga'];
         $tgl_entri = $_GET['tgl_entri'];
@@ -26,7 +27,7 @@
         ------------------------------------------------------------------------------
         <br>
         <center>Pembayaran Tagihan BPJS KESEHATAN
-            <br>Tgl: tanggalSekarang
+            <br>Tgl: <?php $tgl_sekarang ?>
         </center>
         <br>------------------------------------------------------------------------------
         <table style="font-family: Arial; font-size:11px; padding:2mm;width:80mm;">
@@ -68,10 +69,6 @@
             </tr>
             <tr>
                 <td colspan='2'></td>
-            </tr>
-            <tr>
-                <td>SW Reff</td>
-                <td>: -</td>
             </tr>
         </table>
         <br>------------------------------------------------------------------------------

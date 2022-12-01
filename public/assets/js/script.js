@@ -170,7 +170,6 @@ function createpagination(pagenum, total_pages, send) {
 function cetak(kode, potrait) {
     var myVar = $("#" + kode).val();
     // var myVar1 = $("#namaToko" + kode).val();
-    alert(myVar1);
     var admin1 = myVar;
     var kode = {
         kodetrx: kode,
@@ -188,6 +187,7 @@ function getCetak(kode, potrait, admin1) {
         success: function (data) {
             let result = data.data;
 
+            // var customToko = myVar1;
             var adminCustom = admin1;
             var token = "";
             var nama = "";
@@ -201,11 +201,14 @@ function getCetak(kode, potrait, admin1) {
             var pln_ref = "";
             var stand_meter = "";
             var admin = "";
+            var peserta = "";
+            var cbg = "";
             var harga = "";
             var tgl_entri = "";
             var kode_produk = "";
             var tarif_daya = "";
             var tujuan = "";
+            var total_tagihan = "";
             $.map(result, function (item, i) {
                 token = item.tambahan.token;
                 nama = item.tambahan.nama;
@@ -222,6 +225,8 @@ function getCetak(kode, potrait, admin1) {
                 harga = item.harga;
                 tgl_entri = item.tgl_entri;
                 periode = item.tambahan.periode;
+                peserta = item.tambahan.peserta;
+                cbg = item.tambahan.cbg;
                 jml_bulan = item.tambahan.jml_bulan;
                 tarif_daya = item.tambahan.tarif_daya;
                 tagihan = item.tambahan.tagihan;
@@ -278,7 +283,9 @@ function getCetak(kode, potrait, admin1) {
                         "&tujuan=" +
                         tujuan +
                         "&adminCustom=" +
-                        adminCustom;
+                        adminCustom +
+                        "&customToko=" +
+                        customToko;
                 } else if (kode_produk.includes("BYRPLN")) {
                     window.location =
                         "/plntoken?token=" +
@@ -310,7 +317,9 @@ function getCetak(kode, potrait, admin1) {
                         "&tgl_entri=" +
                         tgl_entri +
                         "&adminCustom=" +
-                        adminCustom;
+                        adminCustom +
+                        "&customToko=" +
+                        customToko;
                 } else if (kode_produk.includes("BYRBPJS" || "BYRBPJSTK")) {
                     window.location =
                         "/bpjs?nama=" +
@@ -332,7 +341,9 @@ function getCetak(kode, potrait, admin1) {
                         "&tujuan=" +
                         tujuan +
                         "&adminCustom=" +
-                        adminCustom;
+                        adminCustom +
+                        "&total_tagihan=" +
+                        total_tagihan;
                 } else {
                     // alert(judul);
                     window.location =
@@ -441,7 +452,9 @@ function getCetak(kode, potrait, admin1) {
                         "&tujuan=" +
                         tujuan +
                         "&adminCustom=" +
-                        adminCustom;
+                        adminCustom +
+                        "&total_tagihan=" +
+                        total_tagihan;
                 } else {
                     window.location =
                         "/LandscapeTagihan?nama=" +
